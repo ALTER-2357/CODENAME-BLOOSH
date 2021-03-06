@@ -1,0 +1,53 @@
+
+.button {
+  border: none;
+  color: #ffffff;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-family: system-ui;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+.button1:focus { background-color: #7f5af0}
+
+
+.button1 {background-color: #7f5af0; border-radius: 20px;} 
+.bloosh {background-color: #7f5af0; border-radius: 20px;} 
+
+    
+        
+        a:link {
+  color: #518f72;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #518f72;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #518f72;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #518f72;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
+
+    
+  
+ 
+  
+
+        
