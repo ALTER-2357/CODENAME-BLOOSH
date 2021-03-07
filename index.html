@@ -6,43 +6,85 @@
 <link rel="stylesheet" href="mystyle.css">
 
 </head>
+
 <body style="background-color:#3c3c3c;">
-    
-<div style="text-align:center;">
-<button class="button bloosh">bloosh</button>
+
+
+
+<div id="mySidenav" class="sidenav" font-family:system-ui>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <button onclick="hello()"  class="button button7">About</button>
+  <button onclick="hello()"  class="button button7">Services</button>
+  <button onclick="hello()"  class="button button7">Clients</button>
+  <button onclick="hello()"  class="button button7">Contact</button>
+  <button onclick="hello1()"  class="button button7">login</button>
 </div>
 
+
+
+
+
     
-<h2 style="color:#c4c2c2;font-family:system-ui">Junior Front End Web Developer</h2>
+<div style="text-align:center;">
+<button  class="button bloosh">bloosh</button>
 
-<h3 style="color:#abbbcf; font-family:system-ui">Minimum qualifications:</h3>
-<ul style="color:#abbbcf; font-family:system-ui">
-<li>Bachelor's degree in Computer Science, statistics or related technical/quantitative field or equivalent work experience.</li>
-<li>Experience in Python, Java, SQL, or other programming language.</li>
-</ul>
+</div>
+
+<h2 style="color:#c4c2c2;font-family:system-ui">
+            web design is so, bloosh</h2>
+<h2 style="color:#c4c2c2;font-family:system-ui">
+            we are so, bloosh </h2>
+<h2 style="color:#c4c2c2;font-family:system-ui">
+            your site can be so, bloosh</h2>
 
 
-<h3 style="color:#abbbcf; font-family:system-ui">Preferred qualifications:</h3>
-<ul style="color:#abbbcf; font-family:system-ui">
-<li>Demonstrable coding skills or experience in JavaScript.</li>
-<li>Full-stack development experience.</li>
-</ul>
+<div style="text-align: center;"> 
+     <button onclick="hello1()"  class="button button7">contat us</button>
 
-<h3 style="color:#abbbcf; font-family:system-ui"> Position duties and responsibilities:</h3>
-    <ul style="color:#abbbcf; font-family:system-ui">
-        <li>Construct user guides and documentation</li>
-        <li>Provide end-user support</li>
-        <li>Troubleshoot programming, changes, errors and subsequent modifications; this will
-            be in conjunction with other programmers</li>
-        <li>Support the team in all phases of the software development lifecycle including;
-            analysis, design, deliver functionality, testing and support.</li>
-        <li>Assist with the delivery of projects within a tight deadline</li>
-        <li>Present ideas in user-friendly language</li>
-      </ul>
+ </div>
+ 
 
-<button class="button button1">apply!</button>
+ <hr>
 
 
 
+
+
+ <h3 style="color:#c4c2c2;font-family:system-ui; text-align: center;">
+    Are you hiring?
+    Yes! We’re always looking for talented technologists, artists, designers, and engerners
+    </h3>
+
+    <div style="text-align: center;"> 
+        <button onclick="jobs()"  class="button button7">hire me!</button>
+   
+    </div>
+   
+
+
+    
+ <span class="button button4" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+  
+
+<script>
+ 
+function hello(){  
+alert("hello javatpoint user");  
+}  
+
+function jobs(){ 
+    window.location.href = "/home/alter/dev/go/unit_15.2/jobs.html";
+
+}
+
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
 </body>
 </html>
