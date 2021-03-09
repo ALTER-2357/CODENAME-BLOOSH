@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      
+      <script src="js.js"></script>
  
 <link rel="stylesheet" href="mystyle.css">
 
@@ -18,7 +18,7 @@
   <button onclick="hello()"  class="button button7">Services</button>
   <button onclick="hello()"  class="button button7">Clients</button>
   <button onclick="hello()"  class="button button7">Contact</button>
-  <button onclick="hello1()"  class="button button7">login</button>
+ <!--- <button onclick="hello1()"  class="button button7">login</button> -->
 </div>
 
     
@@ -61,27 +61,17 @@
         <li>Present ideas in user-friendly language</li>
       </ul>
 
-<button class="button button1">apply!</button>
+      <form
+      enctype="multipart/form-data"
+      action="http://localhost:3031/upload"
+      method="post"
+    >
 
-
-
-<script>
- 
-function hello(){  
-alert("hello javatpoint user");  
-}  
-
-function hello1(){ 
-window.location.replace("http://www.w3schools.com");
-}
-
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "100%";
-    }
+    <input class="button button1" type="file"  name="file" >
     
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-    }
-    </script>
+      <input class="button button1" type="submit" value="apply!" />
+    </form>
+
+
 </body>
 </html>
