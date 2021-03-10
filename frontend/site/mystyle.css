@@ -6,6 +6,7 @@
   text-decoration: none;
   font-family: system-ui;
   display: inline-block;
+  background-color: #7f5af0;
   
   margin: 0px 0px;
   cursor: pointer;
@@ -13,7 +14,7 @@
 .button1:focus { background-color: #7f5af0}
 
 
-.button1 {background-color: #7f5af0; font-size: 22px; padding: 22px 32px; border-radius: 10px;} 
+.button1 { font-size: 22px; padding: 22px 32px; border-radius: 10px;} 
 .bloosh  {background-color: #7f5af0;font-size: 30px;  padding: 30px 50px; border-radius: 10px;} 
 .button4 {
  
@@ -69,6 +70,8 @@ hr{
 
 h2 {
   text-align: center;
+  color:#c4c2c2;
+  font-family:system-ui;
 }
 
 
@@ -118,3 +121,6 @@ h2 {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
+
+
