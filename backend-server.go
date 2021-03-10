@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"sync"
 
 	"github.com/gorilla/mux"
 
@@ -43,19 +44,35 @@ func dbConn() (db *sql.DB) {
 
 func main() {
 
-	router := mux.NewRouter()
+	// create a WaitGroup
+	wg := new(sync.WaitGroup)
 
-	router.HandleFunc("/upload", uploadFile).Methods("POST")
+	// add two goroutines to `wg` WaitGroup
+	wg.Add(2)
 
-	//	router.HandleFunc("/posts/", insert).Methods("POST")
+	go func() {
+		router := mux.NewRouter()
 
-	//	router.HandleFunc("/GET/", getPosts).Methods("GET")
+		router.HandleFunc("/upload", uploadFile).Methods("POST")
 
-	//	router.HandleFunc("/DELETE/", deletePost).Methods("POST")
+		log.Fatal(http.ListenAndServe(":3031", router))
+		wg.Done() // one goroutine finished
+	}()
 
-	http.ListenAndServe(":3031", router)
+	go func() {
+		fs := http.FileServer(http.Dir("./site"))
+		http.Handle("/", fs)
+
+		log.Println("forntends up")
+		err := http.ListenAndServe(":3030", nil)
+		if err != nil {
+			log.Fatal(err)
+		}
+	}()
 
 	log.Println("backends up")
+
+	wg.Wait()
 
 }
 
