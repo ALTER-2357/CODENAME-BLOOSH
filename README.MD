@@ -15,19 +15,13 @@
 
 ## Usage
 ```
-cd frontend && go run frontend-server.go
-
-cd backend && go run backend-server.go 
+go run backend-server.go 
 ```
 
 
-#### both of these need to be ran in seprate prosses 
-
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
+Contributing is not welcome.
 
 
 ## License
