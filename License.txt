@@ -7,6 +7,9 @@
 
 
 /################################################################
+
+bloosh 1.0.0
+
 For bloosh to run there needs to be /site, /CVs files
 
 /site is where the website should be 
