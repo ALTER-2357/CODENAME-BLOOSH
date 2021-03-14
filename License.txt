@@ -2,6 +2,17 @@
 
 
 
+
+
+
+
+/################################################################
+For bloosh to run there needs to be /site, /CVs files
+
+/site is where the website should be 
+/CVs should be left empty this is where the cvs will appear
+
+
 /*******************************************************
  * Copyright (C) 2020-2022 lewis mills lewismills290@gmail.com
  * 
@@ -10,3 +21,4 @@
  * bloosh can not be copied and/or distributed without the express
  * permission of lewis mills
  *******************************************************/
+################################################################/
