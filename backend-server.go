@@ -6,11 +6,21 @@ import (
 	"log"
 	"net/http"
 	"sync"
+	"time"
+
+	_ "embed"
 
 	"github.com/gorilla/mux"
 )
 
+//go:embed "License.txt"
+var s string
+
 func main() {
+
+	print(s, "\n", "\n", "\n")
+
+	time.Sleep(10 * time.Second)
 
 	wg := new(sync.WaitGroup)
 
