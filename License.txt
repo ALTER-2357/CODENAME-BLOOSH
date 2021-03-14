@@ -1,0 +1,12 @@
+
+
+
+
+/*******************************************************
+ * Copyright (C) 2020-2022 lewis mills lewismills290@gmail.com
+ * 
+ * This file is part of bloosh.
+ * 
+ * bloosh can not be copied and/or distributed without the express
+ * permission of lewis mills
+ *******************************************************/

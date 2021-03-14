@@ -7,10 +7,16 @@ import (
 	"net/http"
 	"sync"
 
+	_ "embed"
+
 	"github.com/gorilla/mux"
 )
 
 func main() {
+
+	//go:embed "License.txt"
+	var s string
+	print(s)
 
 	wg := new(sync.WaitGroup)
 
