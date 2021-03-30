@@ -24,8 +24,6 @@ go run backend-server.go
 Contributing is not welcome.
 
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
 
 
 
