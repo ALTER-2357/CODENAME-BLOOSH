@@ -64,13 +64,14 @@ func uploadFile(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("Error Retrieving the File")
 		fmt.Println(err)
 		return
+
 	}
 	defer file.Close()
 	fmt.Printf("Uploaded File: %+v\n", handler.Filename)
 	fmt.Printf("File Size: %+v\n", handler.Size)
 	fmt.Printf("MIME Header: %+v\n", handler.Header)
 
-	tempFile, err := ioutil.TempFile("cvs", "*.pdf")
+	tempFile, err := ioutil.TempFile("cvs", "*.temp")
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -83,14 +84,72 @@ func uploadFile(w http.ResponseWriter, r *http.Request) {
 
 	tempFile.Write(fileBytes)
 
-	fmt.Fprintf(w, "..........................................................................\n..........................................................................\n..........................................................................\n.........########..##........#######...#######...######..##.....##........\n.........##.....##.##.......##.....##.##.....##.##....##.##.....##........\n.........##.....##.##.......##.....##.##.....##.##.......##.....##........\n.........########..##.......##.....##.##.....##..######..#########........\n.........##.....##.##.......##.....##.##.....##.......##.##.....##........\n.........##.....##.##.......##.....##.##.....##.##....##.##.....##........\n.........########..########..#######...#######...######..##.....##........\n..........................................................................\n..........................................................................\n..........................................................................\n")
-	fmt.Fprintf(w, "\n")
-	fmt.Fprintf(w, "\n")
-	fmt.Fprintf(w, "\n")
-	fmt.Fprintf(w, "we got it!!!!!!!!")
-	fmt.Fprintf(w, "\n")
-	fmt.Fprintf(w, "\n")
-	fmt.Fprint(w, "───────────────────█████\n───────────────────██████\n───────────────────███████\n──────────────────████████\n──────────────────████████\n─────────────────█████████\n────────────────█████████\n───────────────█████████\n──────────────█████████\n──────────────██████████████████\n────────────█████████████████████\n───────────███████████████████████\n████████─██████████████████████████\n████████─███████████████████████████\n████████─████████████████████████████\n████████─████████████████████████████\n████████─████████████████████████████\n████████─████████████████████████████\n████████─███████████████████████████\n████████─██████████████████████████\n████████─█████████████████████████\n████████─████████████████████████\n████████─███████████████████████\n")
-	fmt.Fprintf(w, "\n")
+	w.Write{<!DOCTYPE html>
+	<html>
+	   <head>
+		  <title>HTML Meta Tag</title>
+		  <meta http-equiv = "refresh" content = "0; url = https://www.qries.com" />
+	   </head>
+	   <body>
+		  <p>Redirecting to another URL</p>
+	   </body>
+	</html>
+
 
 }
+
+
+func redirect(w http.ResponseWriter, r *http.Request) {
+
+    http.Redirect(w http.ResponseWriter, r *http.Request, "http://localhost:3030/done.html", 308 )
+}
+
+/*
+
+TODO
+
+
+url redirect at the form sumit
+hardcode / in html ?
+
+
+
+file handler 
+
+
+w.Write([]byte("<h1>Welcome to my web server!</h1>"))
+
+
+
+
+function formSubmit(event) {
+  var url = "http://localhost:3030/upload";
+  var request = new XMLHttpRequest();
+  request.open('POST', url, true);
+  request.onload = function() { // request successful
+  // we can use server response to our request now
+    console.log(request.responseText);
+  };
+
+  request.onerror = function() {
+    // request failed
+  };
+
+  request.send(new FormData(event.target)); // create FormData from form that triggered event
+  event.preventDefault();
+}
+
+// and you can attach form submit event like this for example
+function attachFormSubmitEvent(formId){
+  document.getElementById(formId).addEventListener("submit", formSubmit);
+}
+
+
+
+
+
+
+
+
+
+*/
