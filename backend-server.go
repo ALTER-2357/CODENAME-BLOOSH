@@ -55,6 +55,7 @@ func main() {
 }
 
 func uploadFile(w http.ResponseWriter, r *http.Request) {
+
 	fmt.Println("File Upload Endpoint Hit")
 
 	r.ParseMultipartForm(10 << 20)
@@ -84,6 +85,29 @@ func uploadFile(w http.ResponseWriter, r *http.Request) {
 
 	tempFile.Write(fileBytes)
 
+}
+
+/*
+TODO
+url redirect at the form sumit
+
+
+
+
+
+
+
+
+hardcode / in html ?
+
+
+
+
+
+w.Write([]byte("<h1>Welcome to my web server!</h1>"))
+
+
+
 	w.Write{<!DOCTYPE html>
 	<html>
 	   <head>
@@ -96,28 +120,10 @@ func uploadFile(w http.ResponseWriter, r *http.Request) {
 	</html>
 
 
-}
-
-
-func redirect(w http.ResponseWriter, r *http.Request) {
-
-    http.Redirect(w http.ResponseWriter, r *http.Request, "http://localhost:3030/done.html", 308 )
-}
-
-/*
-
-TODO
-
-
-url redirect at the form sumit
-hardcode / in html ?
 
 
 
-file handler 
 
-
-w.Write([]byte("<h1>Welcome to my web server!</h1>"))
 
 
 
@@ -130,26 +136,38 @@ function formSubmit(event) {
   // we can use server response to our request now
     console.log(request.responseText);
   };
-
   request.onerror = function() {
     // request failed
   };
-
   request.send(new FormData(event.target)); // create FormData from form that triggered event
   event.preventDefault();
 }
-
 // and you can attach form submit event like this for example
 function attachFormSubmitEvent(formId){
   document.getElementById(formId).addEventListener("submit", formSubmit);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  file handler
+
+
+
+
+
+
+
+
+
 }
-
-
-
-
-
-
-
-
-
 */

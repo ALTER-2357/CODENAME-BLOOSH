@@ -3,7 +3,7 @@
 
 body {
   background-color:#3c3c3c;
-
+  font-family: Arial, sans-serif;
 
 }
 
@@ -23,6 +23,16 @@ body {
   cursor: pointer;
 }
 
+
+.centereddiv {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
+}
 
 
 .button1:focus { background-color: #7f5af0;
@@ -95,7 +105,11 @@ h2 {
 
 }
 
+h4 {
+  color:#c4c2c2;
+  
 
+}
 
 
 
